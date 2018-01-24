@@ -145,17 +145,18 @@
 <p><u><span style="font-size:14px"><strong>Overview</strong></span></u></p>
 <p>
     Setting up a Pirl masternode involves a few things.   You'll need to accumulate/acquire/purchase 20000 Pirl which will be used 
-    as collateral.  You will need to place this collateral in a stand-alone wallet.  You may not 
-    use an exchange wallet. To do this, you'll use the Pirl Natuilus wallet, which can be installed on your normal workstation.  
-    You'll create an account at Pirl's Poseidon website to manage your masternode. 
+    as collateral.  You will need to place this collateral in a stand-alone wallet.  To do this, you'll use the Pirl Natuilus wallet, which can be 
+    installed on your normal workstation.  
+    <br />
+    You'll also create an account at Pirl's Poseidon website to manage your masternode. 
+    <br />
     To prove that you are the owner of that address, you'll need to send a small amount of Pirl to a known address.  This will register 
-    the transaction in the blockchain, proving that you own the address.  The instructions in the sections, below, will provide details 
-    on this validation process.
-    
+    the transaction in the blockchain, proving that you own the address.
+    <br />
     Once these pieces are in place, you can use your Nautilus account to register/watch the Pirl Masternode contract and deposit your 20000 pirl 
     into the contracts wallet.  Don't worry.  You can retrieve that deposit (stake) at any time by de-activating your masternode.  The Pirl will
     be returned to your Nautilus wallet address.
-    
+    <br />
     Finally, you will set up a linux workstation, download the Pirl masternode code, perform a simple configuration, and run the masternode.  You can monitor the masternode's 
     status by viewing your Poseidon account.  Similarly, you can monitor payouts by monitoring the transactions to your Nautilus wallet address.
 </p>
@@ -276,7 +277,7 @@ You will see on the right a token code for your masternode. This is your mastern
 <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/mn_token.png" style="height:100px; width:690px" /><br />
 &nbsp;</p>
 
-<p><span style="background-color:yellow;">COMMENT:  Reversed the order of the export statements to match how the info was recorded above.  Added 'fictitious' example that uses the same format of the actual tokens (for clarity)</span></p>
+<p><span style="background-color:yellow;">COMMENT:  Reversed the order of the export statements to match how the info was recorded in the steps above.  Added 'fictitious' example that uses the same format of the actual tokens (for clarity)</span></p>
 <p><strong>6/.</strong> Now that you have these two tokens, go back to your VPS, type the following into the linux terminal (keep the quotes):</p>
 <em>Fictitious example:</em>
 <pre>
@@ -300,7 +301,7 @@ You will see on the right a token code for your masternode. This is your mastern
             
             <p><span style="background-color:yellow;">COMMENT: New section and screen shots</span></p>
             <p><br />After a brief initialization (a few minutes), the terminal should scroll with update messages every ~10 seconds.
-                <img src="images/pirl-terminal.jpg" title="pirl terminal example" />
+                <img src="images/pirl-terminal.JPG" title="pirl terminal example" />
             </p>
             
             <p><br />
@@ -311,17 +312,17 @@ You will see on the right a token code for your masternode. This is your mastern
             
             <p><br />
                 To further verify that the Masternode is functioning, log into your Poseidon account, click My Master Nodes and then click the Details button.  
-                You should see a growing list of transaction.  The transaction list will automaticlaly refresh, showing the most-recent trasnactions.<br />
+                You should see a growing list of transactions.  The transaction list will automatically refresh, showing the most-recent trasnactions.<br />
                 &nbsp;
                 <br />
-                <img src='images/my-masternode-details.jpg' alt='Show Image of MasterNode details view'  style="width:600px; "/>
+                <img src='images/my-masternode-details.JPG' alt='Show Image of MasterNode details view'  style="width:600px; "/>
                 <br />
                 <br />
             </p>
             
             <br />
             <br />
-            <p><span style="background-color:yellow;">COMMENT: New section</span></p>
+            <p><span style="background-color:yellow;">COMMENT: New section for Troubleshooting</span></p>
             <p style="text-align:center"><span style="font-size:14px"><span style="color:#c0392b"><strong>Troubleshooting</strong></span></span></p>
             
             <em><strong>On the linux server/masternode, the 'Nice your Masternode Is Connected' status is not appearing</strong></em>
@@ -341,6 +342,14 @@ You will see on the right a token code for your masternode. This is your mastern
                         </ul>
                         <br />
                 <br />
+                <em><strong>How do I monitor payouts</strong><em>
+                        <ul>
+                            <li>It's easiest to monitor payouts by monitoring transactions to your Nautilus wallet address.</li>
+                            <li>Using a web browser, simply open <a href="https://pirl.site/home" title="pirl site" target="_child">https://pirl.site</a> and input your Nautilus wallet address
+                            </li>
+                            </ul>
+                            <br />
+                    <br />
                 <em><strong>My VPS server runs, but when I disconnect the SSH connection, mining stops</strong><em>
                     <ul>
                         <li>The instructions in this document explain how to launch the pirl masternode.  This is useful to see the output on the screen.  
