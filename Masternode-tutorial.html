@@ -141,176 +141,228 @@
                       
                       <div class="blog-content">
                         
-                        <p><u><span style="font-size:14px"><strong>Prerequisites</strong></span></u></p>
+<p><span style="background-color:yellow;">COMMENT:  Added section for clarity</span></p>
+<p><u><span style="font-size:14px"><strong>Overview</strong></span></u></p>
+<p>
+    Setting up a Pirl masternode involves a few things.   You'll need to accumulate/acquire/purchase 20000 Pirl which will be used 
+    as collateral.  You will need to place this collateral in a stand-alone wallet.  You may not 
+    use an exchange wallet. To do this, you'll use the Pirl Natuilus wallet, which can be installed on your normal workstation.  
+    You'll create an account at Pirl's Poseidon website to manage your masternode. 
+    To prove that you are the owner of that address, you'll need to send a small amount of Pirl to a known address.  This will register 
+    the transaction in the blockchain, proving that you own the address.  The instructions in the sections, below, will provide details 
+    on this validation process.
+    
+    Once these pieces are in place, you can use your Nautilus account to register/watch the Pirl Masternode contract and deposit your 20000 pirl 
+    into the contracts wallet.  Don't worry.  You can retrieve that deposit (stake) at any time by de-activating your masternode.  The Pirl will
+    be returned to your Nautilus wallet address.
+    
+    Finally, you will set up a linux workstation, download the Pirl masternode code, perform a simple configuration, and run the masternode.  You can monitor the masternode's 
+    status by viewing your Poseidon account.  Similarly, you can monitor payouts by monitoring the transactions to your Nautilus wallet address.
+</p>
+<br />
+<br />
 
+<p><span style="background-color:yellow;">COMMENT:  Mild changes to pre-requisites</span></p>
+<p><u><span style="font-size:14px"><strong>Prerequisites</strong></span></u></p>
 <ul>
-	<li>Download and Install the Nautilus Wallet on your normal computer.  You will use Nautilus to validate a transaction.<a href="http://release.pirl.io/downloads/wallet/">Download Here</a></li>>
-	<li>20,000 Pirl (Plus a tiny amount for transactions) that will be used as collateral.</li>
+    <li>Download and Install the Nautilus Wallet on your normal computer.<a href="http://release.pirl.io/downloads/wallet/">Download Here</a></li>
+	<li>Accumulate/acquire/purchase 20,000 Pirl (Plus a tiny amount for a validation transaction) that will be used as collateral.</li>
 	<li>A dedicated server or VPS (Virtual Private Server) - Linux operating system, 4GB memory, 20GB disk space, 3TB data transfer.  The VPS must support a public IP address.&nbsp;<br />
-	Port 30303 (both UDP and TCP) need to be opened in the firewall.</li>
-	<li>Create an account at&nbsp;<a href="https://poseidon.pirl.io/">Pirl Poseidon</a>. <strong>Choose a strong password!</strong></li>
-</ul>
-
-<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 1 --<br />
-Create An Identifying Transaction For Your Collateral Address</strong></span></span></p>
-
-<p><em>We need to send a transaction from the address that your 20,000 Pirl is being held in. This is to confirm your ownership of the address :</em><br />
-<strong>1/.</strong> Login to Poseidon, and on the left hand menu, choose <strong><em>Wallet -&gt; Wallet details</em></strong>. You will see a Poseidon wallet address for your Pirl Account. <strong>Copy this address</strong>.<br />
-<strong>2/.</strong> Go to Nautilus, and send a transaction from the address your collateral (20000 pirl) is held in to your Poseidon wallet address. Any amount will do (1 or even 0.5 pirl)<br />
-<br />
-<strong>IMPORTANT : DO NOT SEND YOUR 20,000 PIRL TO POSEIDON !!!</strong>&nbsp;<strong>DO NOT SEND FROM AN EXCHANGE WALLET !!!</strong><br />
-<br />
-You will not lose this Pirl, it will be completely accessible to you in your Poseidon account.<br />
-<strong>3/.</strong> Copy the transaction hash from, you will need it in the next step.<br />
-<br />
-<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/send_tx.PNG" style="height:468px; width:800px" /><br />
-<br />
-&nbsp;</p>
-
-<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 2 --<br />
-Create Masternode</strong></span></span></p>
-
-<p><strong>1/.</strong> Go back to Poseidon and choose from the left menu Masternodes -&gt; Create masternode.</p>
-
-<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/create_masternode.png" style="height:600px; width:569px" /></p>
-
-<p><br />
-<strong>2/.</strong> Under &quot;Create a new masternode&quot; fields, enter :</p>
-
-<ul>
-	<li><em><strong>Name*</strong></em>: Your masternode name, you can put whatever you want,</li>
-	<li><em><strong>Wallet id*</strong></em>: Enter the wallet address your collateral is in. (Your Nautilus address)</li>
-	<li><em><strong>Tx hash validation*</strong></em>: Enter the saved transaction hash from step 1</li>
-</ul>
-
-<p><strong>3/.</strong> Click on &quot;<em><strong>Create</strong></em>&quot;.</p>
-
-<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/mn_details.png" style="height:462px; width:680px" /></p>
-
-<p><br />
-You will now see this masternode entry that you created under &quot;My Masternodes&quot;.<br />
-&nbsp;</p>
-
-<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 3 --<br />
-Watch Contract / Node Registration</strong></span></span></p>
-
-<p><strong>1/.</strong> Go back to the Nautilus wallet, and click on the &quot;Contracts&quot; icon near the top right of the screen.<br />
-<br />
-<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/contracts_icon.PNG" style="height:179px; width:600px" /></p>
-
-<p><br />
-<strong>2/.</strong>Click on the option &quot;<em><strong>WATCH CONTRACT</strong></em>&quot;. A window will pop up.<br />
-<br />
-<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/what_contract.png" style="height:400px; width:324px" /></p>
-
-<p><br />
-<strong>3/.</strong> In the contract address, enter:</p>
-
-<pre>
-<code>0x256b2b26Fe8eCAd201103946F8C603b401cE16EC</code></pre>
-
-<p>For the contract name, name it whatever you wish.<br />
-<strong>4/. </strong>In <em><strong>JSON INTERFACE</strong></em>, enter this information (copy and paste the entire code!):</p>
-
-<pre>
-<code>[{"constant":false,"inputs":[],"name":"nodeRegistration","outputs":[{"name":"paid","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"moderators","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"nodes","outputs":[{"name":"pirlAddress","type":"address"},{"name":"nodeStake","type":"uint256"},{"name":"nodeHash","type":"bytes20"},{"name":"stakeLocked","type":"bool"},{"name":"nodeEnabled","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"disableNodeRegistration","outputs":[{"name":"disabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"nodeCost","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getStakeLockedStatus","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nodeCount","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_admin","type":"address"}],"name":"setAdmin","outputs":[{"name":"set","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"enableNode","outputs":[{"name":"enabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"nodeRegistrationEnabled","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"disableNode","outputs":[{"name":"disabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"withdrawStake","outputs":[{"name":"withdrawn","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"nodeAddresses","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeEnabledStatus","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeStake","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"enableNodeRegistration","outputs":[{"name":"enabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeHash","outputs":[{"name":"","type":"bytes20"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nodeFee","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"admin","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeRegistered","type":"bool"},{"indexed":false,"name":"_dateRegistered","type":"uint256"}],"name":"MasterNodeRegistered","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeDisabled","type":"bool"},{"indexed":false,"name":"_dateDisabled","type":"uint256"}],"name":"MasterNodeDisabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeEnabled","type":"bool"},{"indexed":false,"name":"_dateEnabled","type":"uint256"}],"name":"MasterNodeEnabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodePaid","type":"bool"},{"indexed":false,"name":"_datePaid","type":"uint256"}],"name":"MasterNodeRewarded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_stakeWithdrawn","type":"bool"},{"indexed":false,"name":"_dateWithdrawn","type":"uint256"}],"name":"StakeWithdrawn","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":false,"name":"_dateEnabled","type":"uint256"},{"indexed":true,"name":"_registrationEnabled","type":"bool"}],"name":"MasterNodeRegistrationEnabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":false,"name":"_dateDisabled","type":"uint256"},{"indexed":true,"name":"_registrationDisabled","type":"bool"}],"name":"MasterNodeRegistrationDisabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":true,"name":"_admin","type":"address"},{"indexed":true,"name":"_adminSet","type":"bool"}],"name":"SetAdmin","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":true,"name":"_newOwner","type":"address"},{"indexed":true,"name":"_ownerChanged","type":"bool"}],"name":"TransferOwnership","type":"event"}]</code></pre>
-
-<p><strong>5/.</strong> After everything is entered, click <strong>OK</strong>.</p>
-
-<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/watch_contract2.PNG" style="height:500px; width:461px" /></p>
-
-<p><br />
-<strong>6/.</strong> Click on the masternode contract<br />
-<br />
-<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/contract_select.png" style="height:306px; width:300px" /></p>
-
-<p><br />
-In the lower right portion of the screen, there will be a dropdown box that is labeled &quot;Select function&quot;.<br />
-<strong>7/. </strong>Under<strong> </strong>&quot;<em><strong>Select Function</strong></em>&quot;<strong> </strong>Select &quot;<em><strong>Node Registration</strong></em>&quot;,<br />
-<strong>8/.</strong> Under <strong>&quot;</strong><em><strong>Execute from</strong></em><strong>&quot; </strong>choose the wallet address that contains the 20,000 Pirl collateral.<br />
-<strong>9/. </strong>Enter <strong>20000</strong> in the box that is under &quot;Send PIRL&quot; You can withdraw this stake (20000 Pirl) at any time be deactivating the Masternode.,<br />
-<strong>10/.</strong> click <strong>EXECUTE</strong>. Just like any transaction, this will have to be confirmed with your password.<br />
-<br />
-<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/execute_contract.PNG" style="height:351px; width:600px" /></p>
-
-<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/send_contract_tx.PNG" style="height:400px; width:316px" /></p>
-
-<p style="text-align:center"><span style="color:#2980b9"><strong><span style="font-size:16px">-- STEP 4 --<br />
-Starting The Masternode</span></strong></span></p>
-
-<p><strong>1/.</strong> Log into the VPS or dedicated server that you are using for your masternode<br />
-<p><strong>2/.</strong> Verify that a public IP address has been assigned to the server and that the appropriate ports have been opened (see Prerequisites section)<br />
+        Port 30303 (both UDP and TCP) need to be opened in the firewall.</li>
+        <li>Create an account at&nbsp;<a href="https://poseidon.pirl.io/">Pirl Poseidon</a>. <strong>Choose a strong password!</strong></li>
+    </ul>
+    <br />
+    <br />
+    <p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 1 --<br />
+        Create An Identifying Transaction For Your Collateral Address</strong></span></span></p>
+        
+        <p><em>We need to send a transaction from the address that your 20,000 Pirl is being held in. This is to confirm your ownership of the address :</em><br />
+            <strong>1/.</strong> Login to Poseidon, and on the left hand menu, choose <strong><em>Wallet -&gt; Wallet details</em></strong>. You will see a Poseidon wallet address for your Pirl Account. <strong>Copy this address</strong>.<br />
+            <strong>2/.</strong> Go to Nautilus, and send a transaction from the address your collateral (20000 pirl) is held in to your Poseidon wallet address. Any amount will do (1 or even 0.5 pirl)<br />
+            <br />
+            <strong>IMPORTANT : DO NOT SEND YOUR 20,000 PIRL TO POSEIDON !!!</strong>&nbsp;<strong>DO NOT SEND FROM AN EXCHANGE WALLET !!!</strong><br />
+            <br />
+            You will not lose this Pirl, it will be completely accessible to you in your Poseidon account.<br />
+            <strong>3/.</strong> Copy the transaction hash from, you will need it in the next step.<br />
+            <br />
+            <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/send_tx.PNG" style="height:468px; width:800px" /><br />
+            <br />
+            &nbsp;</p>
+            
+            <p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 2 --<br />
+                Create Masternode</strong></span></span></p>
+                
+                <p><strong>1/.</strong> Go back to Poseidon and choose from the left menu Masternodes -&gt; Create masternode.</p>
+                
+                <p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/create_masternode.png" style="height:600px; width:569px" /></p>
+                
+                <p><br />
+                    <strong>2/.</strong> Under &quot;Create a new masternode&quot; fields, enter :</p>
+                    
+                    <ul>
+                        <li><em><strong>Name*</strong></em>: Your masternode name, you can put whatever you want,</li>
+                        <li><em><strong>Wallet id*</strong></em>: Enter the wallet address your collateral is in. (Your Nautilus address)</li>
+                        <li><em><strong>Tx hash validation*</strong></em>: Enter the saved transaction hash from step 1</li>
+                    </ul>
+                    
+                    <p><strong>3/.</strong> Click on &quot;<em><strong>Create</strong></em>&quot;.</p>
+                    
+                    <p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/mn_details.png" style="height:462px; width:680px" /></p>
+                    
+                    <p><br />
+                        You will now see this masternode entry that you created under &quot;My Masternodes&quot;.<br />
+                        &nbsp;</p>
+                        
+                        <p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 3 --<br />
+                            Watch Contract / Node Registration</strong></span></span></p>
+                            
+                            <p><strong>1/.</strong> Go back to the Nautilus wallet, and click on the &quot;Contracts&quot; icon near the top right of the screen.<br />
+                                <br />
+                                <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/contracts_icon.PNG" style="height:179px; width:600px" /></p>
+                                
+                                <p><br />
+                                    <strong>2/.</strong>Click on the option &quot;<em><strong>WATCH CONTRACT</strong></em>&quot;. A window will pop up.<br />
+                                    <br />
+                                    <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/what_contract.png" style="height:400px; width:324px" /></p>
+                                    
+                                    <p><br />
+                                        <strong>3/.</strong> In the contract address, enter:</p>
+                                        
+                                        <pre>
+                                            <code>0x256b2b26Fe8eCAd201103946F8C603b401cE16EC</code></pre>
+                                            
+                                            <p>For the contract name, name it whatever you wish.<br />
+                                                <strong>4/. </strong>In <em><strong>JSON INTERFACE</strong></em>, enter this information (copy and paste the entire code!):</p>
+                                                
+                                                <pre>
+                                                    <code>[{"constant":false,"inputs":[],"name":"nodeRegistration","outputs":[{"name":"paid","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"moderators","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"nodes","outputs":[{"name":"pirlAddress","type":"address"},{"name":"nodeStake","type":"uint256"},{"name":"nodeHash","type":"bytes20"},{"name":"stakeLocked","type":"bool"},{"name":"nodeEnabled","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"disableNodeRegistration","outputs":[{"name":"disabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"nodeCost","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getStakeLockedStatus","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nodeCount","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_admin","type":"address"}],"name":"setAdmin","outputs":[{"name":"set","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"enableNode","outputs":[{"name":"enabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"nodeRegistrationEnabled","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"disableNode","outputs":[{"name":"disabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"withdrawStake","outputs":[{"name":"withdrawn","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"nodeAddresses","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeEnabledStatus","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeStake","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"enableNodeRegistration","outputs":[{"name":"enabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeHash","outputs":[{"name":"","type":"bytes20"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nodeFee","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"admin","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeRegistered","type":"bool"},{"indexed":false,"name":"_dateRegistered","type":"uint256"}],"name":"MasterNodeRegistered","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeDisabled","type":"bool"},{"indexed":false,"name":"_dateDisabled","type":"uint256"}],"name":"MasterNodeDisabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeEnabled","type":"bool"},{"indexed":false,"name":"_dateEnabled","type":"uint256"}],"name":"MasterNodeEnabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodePaid","type":"bool"},{"indexed":false,"name":"_datePaid","type":"uint256"}],"name":"MasterNodeRewarded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_stakeWithdrawn","type":"bool"},{"indexed":false,"name":"_dateWithdrawn","type":"uint256"}],"name":"StakeWithdrawn","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":false,"name":"_dateEnabled","type":"uint256"},{"indexed":true,"name":"_registrationEnabled","type":"bool"}],"name":"MasterNodeRegistrationEnabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":false,"name":"_dateDisabled","type":"uint256"},{"indexed":true,"name":"_registrationDisabled","type":"bool"}],"name":"MasterNodeRegistrationDisabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":true,"name":"_admin","type":"address"},{"indexed":true,"name":"_adminSet","type":"bool"}],"name":"SetAdmin","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":true,"name":"_newOwner","type":"address"},{"indexed":true,"name":"_ownerChanged","type":"bool"}],"name":"TransferOwnership","type":"event"}]</code></pre>
+                                                    
+                                                    <p><strong>5/.</strong> After everything is entered, click <strong>OK</strong>.</p>
+                                                    
+                                                    <p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/watch_contract2.PNG" style="height:500px; width:461px" /></p>
+                                                    
+                                                    <p><br />
+                                                        <strong>6/.</strong> Click on the masternode contract<br />
+                                                        <br />
+                                                        <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/contract_select.png" style="height:306px; width:300px" /></p>
+                                                        
+                                                        <p><br />
+                                                            In the lower right portion of the screen, there will be a dropdown box that is labeled &quot;Select function&quot;.<br />
+                                                            <strong>7/. </strong>Under<strong> </strong>&quot;<em><strong>Select Function</strong></em>&quot;<strong> </strong>Select &quot;<em><strong>Node Registration</strong></em>&quot;,<br />
+                                                            <strong>8/.</strong> Under <strong>&quot;</strong><em><strong>Execute from</strong></em><strong>&quot; </strong>choose the wallet address that contains the 20,000 Pirl collateral.<br />
+                                                            <strong>9/. </strong>Enter <strong>20000</strong> in the box that is under &quot;Send PIRL&quot; You can withdraw this stake (20000 Pirl) at any time be deactivating the Masternode.,<br />
+                                                            <strong>10/.</strong> click <strong>EXECUTE</strong>. Just like any transaction, this will have to be confirmed with your password.<br />
+                                                            <br />
+                                                            <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/execute_contract.PNG" style="height:351px; width:600px" /></p>
+                                                            
+                                                            <p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/send_contract_tx.PNG" style="height:400px; width:316px" /></p>
+                                                            
+                                                            <p><span style="background-color:yellow;">COMMENT:  Mild changes to some of the bullets - for linux newbies</span></p>
+                                                            <p style="text-align:center"><span style="color:#2980b9"><strong><span style="font-size:16px">-- STEP 4 --<br />
+                                                                Starting The Masternode</span></strong></span></p>
+                                                                
+                                                                <p><strong>1/.</strong> Log into the VPS or dedicated server that you are using for your masternode<br />
+                                                                    <p><strong>2/.</strong> Verify that a public IP address has been assigned to the server and that the appropriate ports have been opened (see Prerequisites section)<br />
 <strong>3/.</strong> upload the node binary to this account which can be found in the link below (use the wget linux command or ftp to transfer it to the VPS):<br />
 <a href="http://release.pirl.io/downloads/masternode/linux/pirl" rel="noreferrer" target="_blank" title="http://release.pirl.io/downloads/masternode/linux/pirl">http://release.pirl.io/downloads/masternode/linux/pirl</a></p>
 
 <p>Before running the node, you need two more pieces of information :<br />
-<strong>4/.</strong> Go to your Poseidon account. On the top left of the screen, click on you username, and select &quot;<strong>settings</strong>&quot;<br />
-You will see on the right : &quot;<strong>Your TOKEN is : 0xxxx...</strong>&quot; this is your Dashboard token. <strong>Copy this token</strong><br />
-<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/account_token.png" style="height:240px; width:600px" /><br />
+    <strong>4/.</strong> Go to your Poseidon account. On the top left of the screen, click on you username, and select &quot;<strong>settings</strong>&quot;<br />
+    You will see on the right : &quot;<strong>Your TOKEN is : 0xxxx...</strong>&quot; this is your Dashboard token. <strong>Copy this token</strong><br />
+    <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/account_token.png" style="height:240px; width:600px" /><br />
 <br />
 <strong>5/.</strong> In the left menu, click on &quot;<strong>Masternodes</strong>&quot; --&gt; &quot;<strong>My masternodes</strong>&quot;<br />
 You will see on the right a token code for your masternode. This is your masternode token. <strong>Copy this Token </strong><br />
 <img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/mn_token.png" style="height:100px; width:690px" /><br />
 &nbsp;</p>
 
+<p><span style="background-color:yellow;">COMMENT:  Reversed the order of the export statements to match how the info was recorded above.  Added 'fictitious' example that uses the same format of the actual tokens (for clarity)</span></p>
 <p><strong>6/.</strong> Now that you have these two tokens, go back to your VPS, type the following into the linux terminal (keep the quotes):</p>
-
+<em>Fictitious example:</em>
 <pre>
-<code>export TOKEN="Dashboard Token"
-	export MASTERNODE="MN Token"
-</code></pre>
-
-<p>MN Token is your token from point <strong>4/.</strong> and Dashboard Token your token from point <strong>3/.</strong><br />
-<br />
-<strong>7/. </strong>After that, all you need to do is be in the same directory that you uploaded the pirl binary into, and enter in a terminal :</p>
-
-<pre>
-<code>./pirl</code></pre>
-
-<p>And it will start right up! If you get a permissions error when trying to execute it, type this into the terminal, and execute ./pirl again</p>
-
-<pre>
-<code>chmod 775 pirl</code></pre>
-
-<p><br />
-<strong>Nice, your masternode is running !</strong>
-<br />
-&nbsp;
-</p>
-
-<p><br />After a brief initialization (a few minutes), the terminal should scroll with update messages every ~10 seconds.
-<img src="images/pirl-terminal.jpg" title="pirl terminal example" />
-</p>
-
-
-<p><br />
-	To further verify that the Masternode is functioning, log into your Poseidon account, click My Master Nodes and then click the Details button.  You should see a growing list of transaction.  The transaction list will automaticlaly refresh, showing the most-recent trasnactions.<br />
-	&nbsp;
-	<br />
-	<img src='images/my-masternode-details.jpg' title='Show Image of MasterNode details view' />
-	<br />
-	<br />
-</p>
-
-
-<p style="text-align:center"><span style="font-size:14px"><span style="color:#c0392b"><strong>Troubleshooting</strong></span></span></p>
-
-<ul>
-	<li>Coming Soon!</li>
-</ul>
-
-
-
-<p style="text-align:center"><span style="font-size:14px"><span style="color:#c0392b"><strong>Deactivating Your Masternode</strong></span></span></p>
-
-<p>If you wish to deactivate your masternode, and put your 20,000 Pirl back into your wallet address, you need to go back into the contract that you set up in Oystr previously. Where you had last chosen &ldquo;Node Registration&rdquo;, you can also see on the drop down box &ldquo;Disable Node&rdquo;. Proceed with executing &ldquo;Disable Node&rdquo;, and after that, do the same for &ldquo;Withdraw Stake&rdquo;. Your node will now be deactivated, and your collateral back in your wallet address.</p>
+    <code>
+        export TOKEN="1a23456b7c890de01fg2h34567h8ij90k12l3mn45"  
+        export MASTERNODE="a1234567-90a1-2b34-56e7-1234f5dfe6cb"
+    </code></pre>
+    
+    <p>MN Token is your token from point <strong>4/.</strong> and Dashboard Token your token from point <strong>3/.</strong><br />
+        <br />
+        <strong>7/. </strong>After that, all you need to do is be in the same directory that you uploaded the pirl binary into, and enter in a terminal :</p>
+        
+        <pre>
+            <code>./pirl</code>
+        </pre>
+        
+        <p>And it will start right up! If you get a permissions error when trying to execute it, type this into the terminal, and execute ./pirl again</p>
+        
+        <pre>
+            <code>chmod 775 pirl</code></pre>
+            
+            <p><span style="background-color:yellow;">COMMENT: New section and screen shots</span></p>
+            <p><br />After a brief initialization (a few minutes), the terminal should scroll with update messages every ~10 seconds.
+                <img src="images/pirl-terminal.jpg" title="pirl terminal example" />
+            </p>
+            
+            <p><br />
+                <strong>Nice, your masternode is running !</strong>
+                <br />
+                &nbsp;
+            </p>
+            
+            <p><br />
+                To further verify that the Masternode is functioning, log into your Poseidon account, click My Master Nodes and then click the Details button.  
+                You should see a growing list of transaction.  The transaction list will automaticlaly refresh, showing the most-recent trasnactions.<br />
+                &nbsp;
+                <br />
+                <img src='images/my-masternode-details.jpg' alt='Show Image of MasterNode details view'  style="width:600px; "/>
+                <br />
+                <br />
+            </p>
+            
+            <br />
+            <br />
+            <p><span style="background-color:yellow;">COMMENT: New section</span></p>
+            <p style="text-align:center"><span style="font-size:14px"><span style="color:#c0392b"><strong>Troubleshooting</strong></span></span></p>
+            
+            <em><strong>On the linux server/masternode, the 'Nice your Masternode Is Connected' status is not appearing</strong></em>
+                <ul>
+                    <li>Double check that the EXPORT statements were run and that the dashboard and masternode tokens are recorded properly</li>
+                    <li>Verify that your firewall meets the conditions set in the 'Prerequisites' section of this document</li>
+                    <li>Verify that you downloaded the correct Pirl binary/code.  You may be using an outdated version.</li>
+                </ul>
+                <br />
+                <em><strong>My VPS is running properly, but the Poseidon / Masternode / Details view does not show any blocks/transactions</strong><em>
+                    <ul>
+                        <li>Double check that the EXPORT statements were run and that the dashboard and masternode tokens are recorded properly</li>
+                        <li>Verify that your IP address has been registered and assigned to the masternode server (or VPS, in most cases).  
+                            It's worth nothing that certain VPS providers do not permit the direct assignment of the IP address to the virtual server.  
+                            Several users that attempted to run a Pirl miner using AWS EC2 instances have reported problems.</li>
+                            <li>Verify that you downloaded the correct Pirl binary/code.  You may be using an outdated version.</li>
+                        </ul>
+                        <br />
+                <br />
+                <em><strong>My VPS server runs, but when I disconnect the SSH connection, mining stops</strong><em>
+                    <ul>
+                        <li>The instructions in this document explain how to launch the pirl masternode.  This is useful to see the output on the screen.  
+                            If you wish to run the code as a background process (which will continue running after you close your SSH session), execute the following command:
+                        </li>
+                        </ul>
+                        <pre>
+                            <code>???????????????????????????????????????????????????</code>
+                        </pre>
+                        <br />
                         
-                      </div>
-                      <div class="iq-blog-meta">
-                          <ul class="list-inline">
-                              <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> ryanw</a></li>
-                              <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 11 Dec, 2017</a></li>
-                          </ul>
+                        
+                        <p style="text-align:center"><span style="font-size:14px"><span style="color:#c0392b"><strong>Deactivating Your Masternode</strong></span></span></p>
+                        
+                        <p>If you wish to deactivate your masternode, and put your 20,000 Pirl back into your wallet address, you need to go back into the contract that you set up in Oystr previously. Where you had last chosen &ldquo;Node Registration&rdquo;, you can also see on the drop down box &ldquo;Disable Node&rdquo;. Proceed with executing &ldquo;Disable Node&rdquo;, and after that, do the same for &ldquo;Withdraw Stake&rdquo;. Your node will now be deactivated, and your collateral back in your wallet address.</p>
+                        
+                    </div>
+                    <div class="iq-blog-meta">
+                        <ul class="list-inline">
+                            <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> ryanw</a></li>
+                            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 11 Dec, 2017</a></li>
+                        </ul>
                       </div>
                       
 
