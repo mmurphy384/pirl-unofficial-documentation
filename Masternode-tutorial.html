@@ -1,0 +1,525 @@
+ 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="pirl, blockchain" />
+    <meta name="description" content="Pirl - A blockchain for the community" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+  <title>Pirl Masternode Setup Tutorial</title>
+  <meta name="description" content="Pirl cryptocurency blockchain blog">
+  <meta name="keywords" content=" pirl,  setup,  masternode,  beta, ">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/pirl-static/images/favicon.ico" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://pirl.io/static/css/bootstrap.min.css">
+    
+    <!-- owl-carousel -->
+    <link rel="stylesheet" type="text/css" href="https://pirl.io/static/css/owl-carousel/owl.carousel.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://pirl.io/static/css/font-awesome.css" />
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="https://pirl.io/static/css/magnific-popup/magnific-popup.css" />
+
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="https://pirl.io/static/css/animate.css" />
+    
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://pirl.io/static/css/ionicons.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="https://pirl.io/static/css/style.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="https://pirl.io/static/css/responsive.css">
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="https://pirl.io/static/css/custom.css" />
+    
+    <link rel="stylesheet" href="https://pirl.io/static/css/power.css" />
+
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+
+    <!-- Header -->
+
+    <header id="header-wrap">
+        <div class="navbar navbar-default navbar-fixed-top menu-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 627.33 208"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#linear-gradient);}.cls-3{fill:url(#linear-gradient-2);}.cls-4{fill:url(#linear-gradient-3);}.cls-5{fill:url(#linear-gradient-4);}.cls-6{fill:url(#linear-gradient-5);}.cls-7{fill:url(#linear-gradient-6);}.cls-8{fill:url(#linear-gradient-7);}.cls-9{fill:url(#linear-gradient-8);}</style><linearGradient id="linear-gradient" x1="145.32" y1="-84.83" x2="145.32" y2="80.31" gradientTransform="translate(-38.81 236.64) rotate(-45)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cee075"/><stop offset="0.19" stop-color="#c5d96c"/><stop offset="0.49" stop-color="#abc752"/><stop offset="0.71" stop-color="#96b73d"/></linearGradient><linearGradient id="linear-gradient-2" x1="230.91" y1="55.13" x2="146.01" y2="55.13" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, -38.9, 236.72)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cee075"/><stop offset="0.25" stop-color="#c6da6d"/><stop offset="0.62" stop-color="#b2cb59"/><stop offset="1" stop-color="#96b73d"/></linearGradient><linearGradient id="linear-gradient-3" x1="217.13" y1="-16.65" x2="217.13" y2="189.82" gradientTransform="translate(-38.81 236.64) rotate(-45)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cee075"/><stop offset="0.08" stop-color="#c5d96c"/><stop offset="0.23" stop-color="#abc752"/><stop offset="0.32" stop-color="#96b73d"/></linearGradient><linearGradient id="linear-gradient-4" x1="1070.74" y1="119.27" x2="1070.74" y2="119.27" gradientTransform="translate(907.99 -558.38) rotate(135)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e7eeb5"/><stop offset="0.15" stop-color="#dfe9ac"/><stop offset="0.4" stop-color="#cadc92"/><stop offset="0.72" stop-color="#a9c669"/><stop offset="0.99" stop-color="#86b03f"/></linearGradient><linearGradient id="linear-gradient-5" x1="984.87" y1="6.8" x2="984.87" y2="171.94" gradientTransform="translate(907.99 -558.38) rotate(135)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cee075"/><stop offset="0.18" stop-color="#c7dc6c"/><stop offset="0.48" stop-color="#b5d152"/><stop offset="0.71" stop-color="#a4c63a"/></linearGradient><linearGradient id="linear-gradient-6" x1="1070.67" y1="147.67" x2="985.72" y2="147.67" gradientTransform="translate(907.99 -558.38) rotate(135)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cee075"/><stop offset="0.24" stop-color="#c9dd6d"/><stop offset="0.6" stop-color="#bad358"/><stop offset="1" stop-color="#a4c63a"/></linearGradient><linearGradient id="linear-gradient-7" x1="1056.5" y1="75.1" x2="1056.5" y2="281.8" gradientTransform="translate(907.99 -558.38) rotate(135)" xlink:href="#linear-gradient-3"/><linearGradient id="linear-gradient-8" x1="1070.74" y1="117.28" x2="1070.81" y2="117.28" xlink:href="#linear-gradient-4"/></defs><title>Artboard 1</title><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M265.11,34.14h34.78c29,0,54.54,8.3,54.54,43.67v3.56c0,34.39-25.49,43.87-54.54,43.87H281.71v49.21s-16.6,0-16.6-9.88Zm16.6,13.64V111.6h18.18c22.33,0,37.94-4.35,37.94-32,0-25.69-15.61-31.82-37.94-31.82Z"/><path class="cls-1" d="M379.92,32.16s16.6,0,16.6,9.88v132.4s-16.6,0-16.6-9.88Z"/><path class="cls-1" d="M475.37,108c27.27,10.67,38.54,50.79,48.22,65.41a26,26,0,0,1-5.73.59c-5.53,0-14-1.78-19.17-11.26-15.61-29-22.92-50.19-53.95-54.15v65.81s-16.6-.2-16.6-9.88V34.14h40.71c27.07,0,46.64,8.5,46.64,33.4v5.93C515.49,95.8,498.69,108,475.37,108ZM444.74,47.77V95.6h25.69c21.14,0,28.46-8.69,28.46-25.1,0-16.8-9.68-22.73-30-22.73Z"/><path class="cls-1" d="M557,172.47s-16.6,0-16.6-9.88V32.16S557,32.16,557,42V158.83h49c13.44,0,17-3,17-3,0,5.93-1.78,16.6-9.88,16.6Z"/></g><g id="Layer_2" data-name="Layer 2"><path class="cls-2" d="M124.67,179.64a24.21,24.21,0,0,1-2.49.12,25.58,25.58,0,0,1-13.88-4.16,27.49,27.49,0,0,1-6.33-5.21l.06-.13-.33-.39L27.35,95.34A14,14,0,0,0,6.64,114L92,199.44a13.93,13.93,0,0,0,19.67,0l27.75-27.55-1,.85C135.62,175.25,131.32,179,124.67,179.64Z"/><path class="cls-3" d="M151.55,107.79c1.19,10.76-5.19,18.47-8.1,21.39-.62.62-1.09,1-1.29,1.19l-.58.47-39.79,39.5a37,37,0,0,0,6.69,5.54,25.18,25.18,0,0,0,16.12,4,20.05,20.05,0,0,0,8.17-2.67,36.36,36.36,0,0,0,5.32-4A23.76,23.76,0,0,1,140,171.7l31.7-31.47,0,0a13.94,13.94,0,0,0,0-19.71L145.41,94.26c1.95,2.59,5.07,7.25,5.86,11.73C151.39,106.57,151.48,107.17,151.55,107.79Z"/><path class="cls-4" d="M102.94,71.34a13.93,13.93,0,0,0,0,19.7l39.29,39.29.05,0a27.78,27.78,0,0,0,5.51-6.5,24.46,24.46,0,0,0,3.8-15.86c-.06-.52-.13-1-.22-1.53a25.35,25.35,0,0,0-5.31-11.26,19.22,19.22,0,0,0-1.45-1.83l-.92-.92c-.37-.35-.66-.7-.95-.95h0l-20.1-20.1A13.93,13.93,0,0,0,102.94,71.34Zm40.71,56h0Z"/><path class="cls-5" d="M67,114.87l-.92-.92C66.39,114.29,66.7,114.59,67,114.87Z"/><path class="cls-6" d="M201.15,109.66a14,14,0,0,0,1.52-18l-84-84A13.93,13.93,0,0,0,99,7.63L71.27,35.18l1-.85c2.85-2.47,7.15-6.2,13.79-6.85a24.21,24.21,0,0,1,2.49-.12,25.58,25.58,0,0,1,13.88,4.16,25.29,25.29,0,0,1,6.27,5.36l.24.26.09.1,74.21,74.37A14.41,14.41,0,0,0,201.15,109.66Z"/><path class="cls-7" d="M102.75,31.6a27.53,27.53,0,0,0-16.83-4.36,20,20,0,0,0-8.16,2.67,36.3,36.3,0,0,0-5.32,4,23.71,23.71,0,0,1-1.88,1.54L38.89,66.9l0,0a13.93,13.93,0,0,0,0,19.7L64,111.77a25,25,0,0,1-4.69-10.63c-.11-.59-.2-1.19-.27-1.8C57.84,88.58,64.21,80.87,67.12,78c.62-.62,1.09-1,1.28-1.19L69,76.3l39.75-39.47A28.84,28.84,0,0,0,102.75,31.6Z"/><path class="cls-8" d="M64,111.5a25.88,25.88,0,0,0,1.88,2.37l.92.92c.37.35.66.7.95.95h0l20.1,20.1a13.93,13.93,0,0,0,19.7-19.7L68.19,76.75l.53-.53a34.78,34.78,0,0,0-6,7.16,24.46,24.46,0,0,0-3.8,15.86c.06.52.13,1,.22,1.53a25.25,25.25,0,0,0,5,10.87l.31.39Zm2.83-31.63h0Z"/><line class="cls-9" x1="67.89" y1="115.87" x2="67.94" y2="115.81"/></g></svg></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <a href="#" class="toggle-panel button bt-black pull-right visible-lg">Download Wallet</a>
+                    <nav>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a class="page-scroll" href="/ ">Home</a></li>
+                            <li><a class="page-scroll" href="/#who-is">About Pirl</a></li>
+                            <!-- <li><a class="page-scroll" href="#features">Pirl Features</a></li> -->
+                            <li><a class="page-scroll" href="/#great-screenshots">Nautilus</a></li>
+                            <li><a class="page-scroll" href="/#pool">Pools & Exchanges</a></li>
+                            <li><a class="page-scroll" href="/#masternodes">Masternodes</a></li> 
+                            <li><a class="page-scroll" href="/#roadmap">Roadmap</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a class="page-scroll" href="/#faq">FAQ</a></li>
+                            <li><a class="toggle-panel-link" href="/#">Resources</a></li>
+                            <li><a class="toggle-panel visible-xs" href="/#">Download Wallet</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div id="site-wrapper">
+
+    
+
+<div id="scotch-panel"><!-- Left blank on purpose --></div>
+
+    <section class="iq-breadcrumb overview-block-pt text-center iq-bg iq-bg-fixed iq-over-blue-90" style="background: url(https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/pirl-static/images/bg/01.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title white iq-breadcrumb-title iq-mtb-100">
+                        <h1 class="title iq-tw-7">Pirl Masternode Setup Tutorial</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--======= Blog =======-->
+
+<section id="blog" class="iq-page-blog overview-block-ptb">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="iq-blog-box">
+                  <div class="iq-blog-image clearfix">
+                    <img class="img-responsive center-block" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/images/community/pirl-masternode.jpg" alt="#">
+                  </div>
+                  <div class="iq-blog-detail">
+                      <div class="blog-title"> <h5 class="iq-tw-7 iq-mb-10">Pirl Masternode Setup Tutorial</h5> </a> </div>
+                      
+                      
+                      <ul class="iq-tags list-inline iq-mtb-50">
+                      
+                      <li><a href="/blog/tag/pirl/">pirl</a></li>
+                      
+                      <li><a href="/blog/tag/setup/">setup</a></li>
+                      
+                      <li><a href="/blog/tag/masternode/">masternode</a></li>
+                      
+                      <li><a href="/blog/tag/beta/">beta</a></li>
+                      
+                    </ul>
+                      </p>
+                      
+                      <div class="blog-content">
+                        
+                        <p><u><span style="font-size:14px"><strong>Prerequisites</strong></span></u></p>
+
+<ul>
+	<li>Download and Install the Nautilus Wallet on your normal computer.  You will use Nautilus to validate a transaction.<a href="http://release.pirl.io/downloads/wallet/">Download Here</a></li>>
+	<li>20,000 Pirl (Plus a tiny amount for transactions) that will be used as collateral.</li>
+	<li>A dedicated server or VPS (Virtual Private Server) - Linux operating system, 4GB memory, 20GB disk space, 3TB data transfer.  The VPS must support a public IP address.&nbsp;<br />
+	Port 30303 (both UDP and TCP) need to be opened in the firewall.</li>
+	<li>Create an account at&nbsp;<a href="https://poseidon.pirl.io/">Pirl Poseidon</a>. <strong>Choose a strong password!</strong></li>
+</ul>
+
+<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 1 --<br />
+Create An Identifying Transaction For Your Collateral Address</strong></span></span></p>
+
+<p><em>We need to send a transaction from the address that your 20,000 Pirl is being held in. This is to confirm your ownership of the address :</em><br />
+<strong>1/.</strong> Login to Poseidon, and on the left hand menu, choose <strong><em>Wallet -&gt; Wallet details</em></strong>. You will see a Poseidon wallet address for your Pirl Account. <strong>Copy this address</strong>.<br />
+<strong>2/.</strong> Go to Nautilus, and send a transaction from the address your collateral (20000 pirl) is held in to your Poseidon wallet address. Any amount will do (1 or even 0.5 pirl)<br />
+<br />
+<strong>IMPORTANT : DO NOT SEND YOUR 20,000 PIRL TO POSEIDON !!!</strong>&nbsp;<strong>DO NOT SEND FROM AN EXCHANGE WALLET !!!</strong><br />
+<br />
+You will not lose this Pirl, it will be completely accessible to you in your Poseidon account.<br />
+<strong>3/.</strong> Copy the transaction hash from, you will need it in the next step.<br />
+<br />
+<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/send_tx.PNG" style="height:468px; width:800px" /><br />
+<br />
+&nbsp;</p>
+
+<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 2 --<br />
+Create Masternode</strong></span></span></p>
+
+<p><strong>1/.</strong> Go back to Poseidon and choose from the left menu Masternodes -&gt; Create masternode.</p>
+
+<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/create_masternode.png" style="height:600px; width:569px" /></p>
+
+<p><br />
+<strong>2/.</strong> Under &quot;Create a new masternode&quot; fields, enter :</p>
+
+<ul>
+	<li><em><strong>Name*</strong></em>: Your masternode name, you can put whatever you want,</li>
+	<li><em><strong>Wallet id*</strong></em>: Enter the wallet address your collateral is in. (Your Nautilus address)</li>
+	<li><em><strong>Tx hash validation*</strong></em>: Enter the saved transaction hash from step 1</li>
+</ul>
+
+<p><strong>3/.</strong> Click on &quot;<em><strong>Create</strong></em>&quot;.</p>
+
+<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/mn_details.png" style="height:462px; width:680px" /></p>
+
+<p><br />
+You will now see this masternode entry that you created under &quot;My Masternodes&quot;.<br />
+&nbsp;</p>
+
+<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 3 --<br />
+Watch Contract / Node Registration</strong></span></span></p>
+
+<p><strong>1/.</strong> Go back to the Nautilus wallet, and click on the &quot;Contracts&quot; icon near the top right of the screen.<br />
+<br />
+<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/contracts_icon.PNG" style="height:179px; width:600px" /></p>
+
+<p><br />
+<strong>2/.</strong>Click on the option &quot;<em><strong>WATCH CONTRACT</strong></em>&quot;. A window will pop up.<br />
+<br />
+<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/what_contract.png" style="height:400px; width:324px" /></p>
+
+<p><br />
+<strong>3/.</strong> In the contract address, enter:</p>
+
+<pre>
+<code>0x256b2b26Fe8eCAd201103946F8C603b401cE16EC</code></pre>
+
+<p>For the contract name, name it whatever you wish.<br />
+<strong>4/. </strong>In <em><strong>JSON INTERFACE</strong></em>, enter this information (copy and paste the entire code!):</p>
+
+<pre>
+<code>[{"constant":false,"inputs":[],"name":"nodeRegistration","outputs":[{"name":"paid","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"moderators","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"nodes","outputs":[{"name":"pirlAddress","type":"address"},{"name":"nodeStake","type":"uint256"},{"name":"nodeHash","type":"bytes20"},{"name":"stakeLocked","type":"bool"},{"name":"nodeEnabled","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"disableNodeRegistration","outputs":[{"name":"disabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"nodeCost","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getStakeLockedStatus","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nodeCount","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_admin","type":"address"}],"name":"setAdmin","outputs":[{"name":"set","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"enableNode","outputs":[{"name":"enabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"nodeRegistrationEnabled","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"disableNode","outputs":[{"name":"disabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"withdrawStake","outputs":[{"name":"withdrawn","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"nodeAddresses","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeEnabledStatus","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeStake","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"enableNodeRegistration","outputs":[{"name":"enabled","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_pirlAddress","type":"address"}],"name":"getNodeHash","outputs":[{"name":"","type":"bytes20"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nodeFee","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"admin","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeRegistered","type":"bool"},{"indexed":false,"name":"_dateRegistered","type":"uint256"}],"name":"MasterNodeRegistered","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeDisabled","type":"bool"},{"indexed":false,"name":"_dateDisabled","type":"uint256"}],"name":"MasterNodeDisabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodeEnabled","type":"bool"},{"indexed":false,"name":"_dateEnabled","type":"uint256"}],"name":"MasterNodeEnabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_nodePaid","type":"bool"},{"indexed":false,"name":"_datePaid","type":"uint256"}],"name":"MasterNodeRewarded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_pirlAddress","type":"address"},{"indexed":true,"name":"_nodeHash","type":"bytes20"},{"indexed":true,"name":"_stakeWithdrawn","type":"bool"},{"indexed":false,"name":"_dateWithdrawn","type":"uint256"}],"name":"StakeWithdrawn","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":false,"name":"_dateEnabled","type":"uint256"},{"indexed":true,"name":"_registrationEnabled","type":"bool"}],"name":"MasterNodeRegistrationEnabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":false,"name":"_dateDisabled","type":"uint256"},{"indexed":true,"name":"_registrationDisabled","type":"bool"}],"name":"MasterNodeRegistrationDisabled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":true,"name":"_admin","type":"address"},{"indexed":true,"name":"_adminSet","type":"bool"}],"name":"SetAdmin","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_invoker","type":"address"},{"indexed":true,"name":"_newOwner","type":"address"},{"indexed":true,"name":"_ownerChanged","type":"bool"}],"name":"TransferOwnership","type":"event"}]</code></pre>
+
+<p><strong>5/.</strong> After everything is entered, click <strong>OK</strong>.</p>
+
+<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/watch_contract2.PNG" style="height:500px; width:461px" /></p>
+
+<p><br />
+<strong>6/.</strong> Click on the masternode contract<br />
+<br />
+<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/contract_select.png" style="height:306px; width:300px" /></p>
+
+<p><br />
+In the lower right portion of the screen, there will be a dropdown box that is labeled &quot;Select function&quot;.<br />
+<strong>7/. </strong>Under<strong> </strong>&quot;<em><strong>Select Function</strong></em>&quot;<strong> </strong>Select &quot;<em><strong>Node Registration</strong></em>&quot;,<br />
+<strong>8/.</strong> Under <strong>&quot;</strong><em><strong>Execute from</strong></em><strong>&quot; </strong>choose the wallet address that contains the 20,000 Pirl collateral.<br />
+<strong>9/. </strong>Enter <strong>20000</strong> in the box that is under &quot;Send PIRL&quot; You can withdraw this stake (20000 Pirl) at any time be deactivating the Masternode.,<br />
+<strong>10/.</strong> click <strong>EXECUTE</strong>. Just like any transaction, this will have to be confirmed with your password.<br />
+<br />
+<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/execute_contract.PNG" style="height:351px; width:600px" /></p>
+
+<p><img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/send_contract_tx.PNG" style="height:400px; width:316px" /></p>
+
+<p style="text-align:center"><span style="color:#2980b9"><strong><span style="font-size:16px">-- STEP 4 --<br />
+Starting The Masternode</span></strong></span></p>
+
+<p><strong>1/.</strong> Log into the VPS or dedicated server that you are using for your masternode<br />
+<p><strong>2/.</strong> Verify that a public IP address has been assigned to the server and that the appropriate ports have been opened (see Prerequisites section)<br />
+<strong>3/.</strong> upload the node binary to this account which can be found in the link below (use the wget linux command or ftp to transfer it to the VPS):<br />
+<a href="http://release.pirl.io/downloads/masternode/linux/pirl" rel="noreferrer" target="_blank" title="http://release.pirl.io/downloads/masternode/linux/pirl">http://release.pirl.io/downloads/masternode/linux/pirl</a></p>
+
+<p>Before running the node, you need two more pieces of information :<br />
+<strong>4/.</strong> Go to your Poseidon account. On the top left of the screen, click on you username, and select &quot;<strong>settings</strong>&quot;<br />
+You will see on the right : &quot;<strong>Your TOKEN is : 0xxxx...</strong>&quot; this is your Dashboard token. <strong>Copy this token</strong><br />
+<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/account_token.png" style="height:240px; width:600px" /><br />
+<br />
+<strong>5/.</strong> In the left menu, click on &quot;<strong>Masternodes</strong>&quot; --&gt; &quot;<strong>My masternodes</strong>&quot;<br />
+You will see on the right a token code for your masternode. This is your masternode token. <strong>Copy this Token </strong><br />
+<img alt="" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/uploads/2018/01/11/mn_token.png" style="height:100px; width:690px" /><br />
+&nbsp;</p>
+
+<p><strong>6/.</strong> Now that you have these two tokens, go back to your VPS, type the following into the linux terminal (keep the quotes):</p>
+
+<pre>
+<code>export TOKEN="Dashboard Token"
+	export MASTERNODE="MN Token"
+</code></pre>
+
+<p>MN Token is your token from point <strong>4/.</strong> and Dashboard Token your token from point <strong>3/.</strong><br />
+<br />
+<strong>7/. </strong>After that, all you need to do is be in the same directory that you uploaded the pirl binary into, and enter in a terminal :</p>
+
+<pre>
+<code>./pirl</code></pre>
+
+<p>And it will start right up! If you get a permissions error when trying to execute it, type this into the terminal, and execute ./pirl again</p>
+
+<pre>
+<code>chmod 775 pirl</code></pre>
+
+<p><br />
+<strong>Nice, your masternode is running !</strong>
+<br />
+&nbsp;
+</p>
+
+<p><br />After a brief initialization (a few minutes), the terminal should scroll with update messages every ~10 seconds.
+	<pre>
+		<code>
+			INFO [01-24|03:06:12] Imported new chain segment               blocks=1 txs=0  mgas=0.000 elapsed=12.833ms  mgasps=0.000  number=711760 hash=xxxxxx…yyyyyy
+			INFO [01-24|03:06:15] ########       :) Nice your Masternode Is connected :)     #########
+			INFO [01-24|03:06:15] Imported new chain segment               blocks=1 txs=0  mgas=0.000 elapsed=9.741ms   mgasps=0.000  number=711760 hash=wwwwww…zzzzzz
+			INFO [01-24|03:06:20] ########       :) Nice your Masternode Is connected :)     #########
+		</code>
+	</pre>
+</p>
+
+
+<p><br />
+	To further verify that the Masternode is functioning, log into your Poseidon account, click My Master Nodes and then click the Details button.  You should see a growing list of transaction.  The transaction list will automaticlaly refresh, showing the most-recent trasnactions.<br />
+	&nbsp;
+	<img src='javascript://' title='Show Image of MasterNode details view' />
+</p>
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#c0392b"><strong>Deactivating Your Masternode</strong></span></span></p>
+
+<p>If you wish to deactivate your masternode, and put your 20,000 Pirl back into your wallet address, you need to go back into the contract that you set up in Oystr previously. Where you had last chosen &ldquo;Node Registration&rdquo;, you can also see on the drop down box &ldquo;Disable Node&rdquo;. Proceed with executing &ldquo;Disable Node&rdquo;, and after that, do the same for &ldquo;Withdraw Stake&rdquo;. Your node will now be deactivated, and your collateral back in your wallet address.</p>
+                        
+                      </div>
+                      <div class="iq-blog-meta">
+                          <ul class="list-inline">
+                              <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> ryanw</a></li>
+                              <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 11 Dec, 2017</a></li>
+                          </ul>
+                      </div>
+                      
+
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!--======= End Blog =======--> 
+
+
+</div>
+ 
+
+<!-- Footer -->
+
+<footer>
+    <!-- Footer Info -->
+
+    <section class="footer-info iq-pt-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="info-share text-center">
+                        <li><a href="https://twitter.com/PirlOfficial" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://discord.gg/z4faFxD" title="Discord"><i class="fa fa-wechat"></i></a></li>
+                        <li><a href="https://www.reddit.com/r/pirl/" title="Reddit"><i class="fa fa-reddit"></i></a></li>
+                        <li><a href="https://github.com/pirl/" title="Github"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://bitcointalk.org/index.php?topic=2120193" title="BitcoinTalk"><i class="fa fa-commenting"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row iq-mt-40">
+                <div class="col-sm-12 text-center">
+
+                    <div class="footer-copyright iq-ptb-20">Copyright @<span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="http://www.pirl.io" class="text-green">Pirl.</a> All Rights Reserved </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Info END -->
+
+</footer>
+
+
+
+<!-- back-to-top -->
+
+<div id="back-to-top">
+    <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>
+</div>
+
+<!-- back-to-top End -->    
+
+</div>
+  
+<div id="fixed-nav">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="closepanel">
+            <a href="#" class="toggle-panel"><i aria-hidden="true" class="ion-android-close"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="wallets">
+            <a href="http://release.pirl.io/downloads/wallet/linux/Pirl-Nautilus-Wallet-linux64-0-0-2.deb">
+              <i aria-hidden="true" class="ion-social-tux"></i><br />
+              NAUTILUS FOR LINUX
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="row iq-pt-20">
+      <div class="col-sm-12">
+        <div class="wallets iq-pt-20">
+            <a href="http://release.pirl.io/downloads/wallet/mac/Pirl-Nautilus-Wallet-0.0.2-mac.zip">
+              <i aria-hidden="true" class="ion-social-apple"></i><br />
+              NAUTILUS FOR MAC
+            </a>
+        </div>
+      </div>
+    </div> 		
+    <div class="row iq-pt-20">
+      <div class="col-sm-12">
+        <div class="wallets iq-pt-20">
+            <a href="http://release.pirl.io/downloads/wallet/windows/Pirl-Nautilus-Wallet-win64-0-0-2.zip">
+              <i aria-hidden="true" class="ion-social-windows"></i><br />
+              NAUTILUS FOR WINDOWS
+            </a>
+        </div>
+      </div>
+    </div>  
+    <div class="row iq-pt-20">
+      <div class="col-sm-12">
+        <div class="wallets iq-pt-20">
+            <a href="https://wallet.pirl.io/">
+              <i aria-hidden="true" class="ion-ios-folder"></i><br />
+              WEB WALLET
+            </a>
+        </div>
+      </div>
+    </div>          
+  </div>
+
+ <div id="fixed-link">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="closepanel">
+            <a href="#" class="toggle-panel-link"><i aria-hidden="true" class="ion-android-close"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="links">
+            <p>Community</p>
+            <hr />
+            <br />
+            <a href="https://discord.gg/U2vuW3x" target="_blank">
+              <i aria-hidden="true" class="ion-chatbox-working"></i>Discord<br />
+            </a>
+            <a href="https://twitter.com/PirlOfficial" target="_blank">
+              <i aria-hidden="true" class="ion-social-twitter"></i>Twitter<br />
+            </a>
+            <a href="https://www.reddit.com/r/pirl/" target="_blank">
+              <i aria-hidden="true" class="ion-social-reddit"></i>Reddit<br />
+            </a>
+            <a href="https://github.com/pirl/" target="_blank">
+              <i aria-hidden="true" class="ion-social-github"></i>Github<br />
+            </a>
+            <a href="https://bitcointalk.org/index.php?topic=2120193" target="_blank">
+              <i aria-hidden="true" class="ion-android-chat"></i>BitcoinTalk ANN<br />
+            </a>
+            <a href="https://forum.pirl.io/" target="_blank">
+              <i aria-hidden="true" class="ion-ios-chatboxes"></i>Community Forums<br />
+            </a>
+            <br />
+            <p>Tools</p>
+            <hr />
+            <br />
+            <a href="https://wallet.pirl.io/" target="_blank">
+              <i aria-hidden="true" class="ion-ios-folder"></i>Web Wallet<br />
+            </a>
+            <a href="https://pool.pirl.io/" target="_blank">
+              <i aria-hidden="true" class="ion-ios-list-outline"></i>Pool List<br />
+            </a>
+            <a href="http://stats.pirl.io/" target="_blank">
+              <i aria-hidden="true" class="ion-stats-bars"></i>Stats<br />
+            </a>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+</body>
+
+
+
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://pirl.io/static/js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="https://pirl.io/static/js/bootstrap.min.js"></script>
+
+    <!-- owl-carousel -->
+    <script type="text/javascript" src="https://pirl.io/static/js/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- Counter -->
+    <script type="text/javascript" src="https://pirl.io/static/js/counter/jquery.countTo.js"></script>
+
+    <!-- Jquery Appear -->
+    <script type="text/javascript" src="https://pirl.io/static/js/jquery.appear.js"></script>
+
+    <!-- Magnific Popup -->
+    <script type="text/javascript" src="https://pirl.io/static/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Retina 
+    <script type="text/javascript" src="https://pirl.io/static/js/retina.min.js"></script>
+    -->
+
+    <!-- wow -->
+    <script type="text/javascript" src="https://pirl.io/static/js/wow.min.js"></script>
+
+    <!-- Countdown -->
+    <script type="text/javascript" src="https://pirl.io/static/js/jquery.countdown.min.js"></script>
+
+    <!-- Skrollr -->
+    <script type="text/javascript" src="https://pirl.io/static/js/skrollr.min.js"></script>
+
+    <!-- Custom -->
+    <script type="text/javascript" src="https://pirl.io/static/js/custom.js"></script>
+    
+    <!-- slide panel -->
+    <script type="text/javascript" src="https://pirl.io/static/js/scotchPanels.min.js"></script>
+    <script type="text/javascript" src="https://pirl.io/static/js/power.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105406341-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+    
+ 
+</html>
