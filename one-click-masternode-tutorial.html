@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="pirl, blockchain" />
-    <meta name="description" content="Pirl - A blockchain for the community" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="pirl, blockchain" />
+  <meta name="description" content="Pirl - A blockchain for the community" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     
   <title>Pirl Masternode Setup Tutorial</title>
   <meta name="description" content="Pirl cryptocurency blockchain blog">
@@ -89,231 +90,263 @@
         </div>
     </header>
 
-<div id="site-wrapper">
+    <div id="site-wrapper">
+        <div id="scotch-panel"><!-- Left blank on purpose --></div>    
 
-    
 
-<div id="scotch-panel"><!-- Left blank on purpose --></div>
+            <section class="iq-breadcrumb overview-block-pt text-center iq-bg iq-bg-fixed iq-over-blue-90" style="background: url(https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/pirl-static/images/bg/01.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="heading-title white iq-breadcrumb-title iq-mtb-100">
+                                <h1 class="title iq-tw-7">Pirl One-Click-Masternode Setup Tutorial</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section class="iq-breadcrumb overview-block-pt text-center iq-bg iq-bg-fixed iq-over-blue-90" style="background: url(https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/pirl-static/images/bg/01.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="heading-title white iq-breadcrumb-title iq-mtb-100">
-                        <h1 class="title iq-tw-7">Pirl One-Click-Masternode Setup Tutorial</h1>
+            <!--======= Blog =======-->
+            <section id="blog" class="iq-page-blog overview-block-ptb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="iq-blog-box">
+                                <div class="iq-blog-image clearfix">
+                                    <img class="img-responsive center-block" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/images/community/pirl-masternode.jpg" alt="#">
+                                </div>
+                                <div class="iq-blog-detail">
+                                    <div class="blog-title">
+                                        <h5 class="iq-tw-7 iq-mb-10">Pirl One-click Masternode Setup Tutorial</h5>
+                                    </div>
+                                    <ul class="iq-tags list-inline iq-mtb-50">
+                                        <li><a href="/blog/tag/pirl/">pirl</a></li>
+                                        <li><a href="/blog/tag/setup/">setup</a></li>
+                                        <li><a href="/blog/tag/masternode/">masternode</a></li>
+                                        <li><a href="/blog/tag/beta/">beta</a></li>
+                                    </ul>
+
+                                    <div class="blog-content">
+                                        
+                                        <p>
+                                            <u>
+                                                <span style="font-size:14px">
+                                                    <strong>Overview</strong>
+                                                </span>
+                                            </u>
+                                        </p>
+                                        
+                                        <p>
+                                            This guide uses the one-click-masternode setup feature.  This is an optional feature for those that wish to have a more hand-off experience with masternode mining.
+                                            This Poseidon feature automatically configure your CentOS linux server to be a Pirl Masternode Miner. Updates will be applied automatically.  All you have to do is monitor your server to 
+                                            ensure it stays operational. Before using this guide, please refer to the official <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/' target='_child'>Pirl Masternode Setup Tutorial</a> to complete the pre-requisites.
+                                        </p>
+                                        
+                                        <br />
+                                        <br />
+                                        
+                                        <p>
+                                            <u>
+                                                <span style="font-size:14px"><strong>Prerequisites</strong></span>
+                                            </u>
+                                        </p>
+                                        <p>
+                                            <span style="font-size:14px">
+                                                We assume you have completed the following tasks, based on the offical <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/' target='_child'>Pirl Masternode Setup Tutorial</a>.
+                                            </span>
+                                        </p>
+
+                                        <ul>
+                                            <li><strong>a.</strong> Downloaded and installed the latest Pirl Nautilus Wallet and created a wallet account/address (see tutorial).</li>
+                                            <li><strong>b.</strong> Created a Poseidon account (see tutorial).</li>
+                                            <li><strong>c.</strong> Sent 20001 Pirl to the Pirl Nautilus wallet address (see tutorial).</li>
+                                            <li><strong>d.</strong> Sent a small amount of Pirl (0.5) from your Nautilus wallet address to your Poseidon wallet address and recorded the transaction hash (see tutorial).</li>
+                                            <li><strong>e.</strong> Configured your Nautilus wallet account to 'watch' the Pirl Masternode contract and deposit 20000 Pirl into the contract address (see tutorial).</li>
+                                            <li><strong>f.</strong> Added the Masternode entry in Poseidon (see tutorial)</li>
+                                        </ul>
+
+                                        <br />
+                                        <br />
+                                        
+                                        <p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 1 -- Verify Masternode Entry<br />
+                                            Verify your Poseidon Masternode record has been created properly</strong></span></span></p>
+                                            
+                                            <strong>1/.</strong> Login to Poseidon, and on the left hand menu, choose <strong><em>Masternodes -&gt; My Masternodes</em></strong>. 
+                                            
+                                            <br />
+                                            <strong>2/.</strong> The "MN Token" should look something like: a1234567-90a1-2b34-56e7-1234f5dfe6cb.  If you do not see a valid 'Masternode Token' value, wait a few hours.  
+                                            If the problem continues, obtain assistance via Pirl's Discord channel <br />
+                                            
+                                            <strong>3/.</strong> If all pre-requisites have been completed successfully, you should see the following screen shot : <br />
+                                            <br />
+                                            <img alt="" src="./images/poseidon_mn.png" style="width:800px;" />
+                                            <br />
+                                            
+                                            
+                                            
+                                        </p>
+                    
+                                        <p style="text-align:center">
+                                            <span style="color:#2980b9">
+                                                <span style="font-size:16px">
+                                                    <strong>-- STEP 2 --<br />Create/Launch CentOS linux server</strong>
+                                                </span>
+                                            </span>
+                                        </p>
+                                            
+                                        <p>
+                                            <strong>1/.</strong> Verify that the server meets the appropriate specifications as noted in the <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/'>Pirl Masternode Setup Tutorial</a>.<br />
+                                            <strong>2/.</strong> The server MUST use the CentOS version of linux.<br />
+                                            <strong>3/.</strong> Record of the static/public IP address of the server as well as the root password.  We do recommend logging into that server 1x to ensure the 'root' credentials work.  
+                                            It is not necessary to take any other actions in the server.  It's preferred if you don't make any other adjustments, whatsoever.<br />
+                                        </p>
+                                        
+                                                
+                                        <br />
+                                        <br />
+                                                    
+                                        <p style="text-align:center">
+                                            <span style="color:#2980b9">
+                                                <span style="font-size:16px">
+                                                    <strong>-- STEP 3 -- <br />Configure One-Click MN Setup</strong>
+                                                </span>
+                                            </span>
+                                        </p>
+                                            
+                                        <p>
+                                            <em>Ensure you have the public/static IP address and 'root' credentials before proceeding with this step</em>
+                                            <br />
+                                            <strong>1/.</strong> Login to Poseidon, and on the left hand menu, choose <strong><em>Masternodes -&gt; My Masternodes</em></strong>. You should see the following: 
+                                            <br />
+                                            <br />
+                                            <img alt="" src="./images/poseidon_one_click.png" style="height:468px; width:800px" />
+                                            <br />
+                                            <strong>2/.</strong> Click the 'One-Click MN Setup' button and complete all fields.
+                                            <br />
+                                            <br />
+                                            <img alt="" src="./images/poseidon_one_click_config.png" style="height:468px; width:800px" />
+                                            <br />
+                                            <br />
+                                            <strong>3/.</strong> After returning to the 'My Masternodes' screen, you should see that your masternode entry is 'Managed by Poseidon'.
+                                            <br />
+                                            <br />
+                                            <img alt="" src="./images/poseidon_one_click_status.png" style="width:800px" />
+                                            <br />
+                                            <br />
+                                            <strong>4/.</strong> Please allow 30 minutes for the configuration to finish.  You can click the 'details' button to monitor the status.
+                                            <br />
+                                            <br />
+                                            <strong>5/.</strong> While we don&#39;t necessarily encourage active access on the server, if you wish to check the status, log into your 
+                                                            server and issue the following command:
+                                            <br />
+                                            <br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # journalctl -f
+                                            <br />
+                                            <br />
+                                            You should see status messages.  Click CTRL+C to exit the journal/log screen.
+                                            <br />
+                                            <br />
+                                            <strong>6/.</strong> Monitor the status of your Masternode miner by checking the Poseidon Masternode details page.  A functioning miner should appear as follows (however, the version may be different than is shown in the screen shot below):
+                                            <br />
+                                            <br />
+                                            <img alt="" src="./images/poseidon_mn_details.png" style="width:800px" /><br />
+
+                                        </p>
+
+                                        <p style="text-align:center"><span style="font-size:16px"><span style="color:#c0392b"><strong>--Troubleshooting / FAQ--</strong></span></span></p>
+
+                                        <p><em><strong>I waited 30 minutes for the 'one-click MN setup' to complete, but the Masternode Details page is still blank</strong></em></p>
+
+                                        <ul>
+                                            <li>Contact the Pirl development team in the Discord channel</li>
+                                        </ul>
+
+                                        <p>
+                                            <br />
+                                            <em>
+                                                <strong>Should I be concerned that I gave away root level credentials?</strong>
+                                            </em>
+                                        </p>
+
+                                        <ul>
+                                            <li><em><em>This should not be a concern if the only purpose for the linux server is to act as a Pirl Masternode.  If you are using the same server for other purposes, we don&#39;t recommend you use this feature.</em></em></li>
+                                            <li><em><em>It shouldn&#39;t be necessary for you to actively manage this server.  For that reason, use a very-difficult &#39;root&#39; level password.  Do not user a password that you use on other systems.</em></em></li>
+                                        </ul>
+
+                                        <br />
+                                        <br />
+                                        <p>
+                                            <em><em><em><strong>Do I have to perform any updates?</strong></em></em></em>
+                                        </p>
+
+                                        <ul>
+                                            <li>
+                                                <em><em><em><em>
+                                                No.  Poseidon will take care of this for you.  All you have to do is monitor your servers uptime and ensure the Masternode details page is 
+                                                showing current transactions.
+                                                </em></em></em></em>
+                                            </li>
+                                        </ul>
+                                
+                                    </div>
+                                    <div class="iq-blog-meta">
+                                        <ul class="list-inline">
+                                            <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> ryanw</a></li>
+                                            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 8 Apr, 2018</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!--======= End Blog =======--> 
+        </div>
+ 
+
+    <!-- Footer -->
+
+    <footer>
+        <!-- Footer Info -->
+
+        <section class="footer-info iq-pt-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="info-share text-center">
+                            <li><a href="https://twitter.com/PirlOfficial" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://discord.gg/z4faFxD" title="Discord"><i class="fa fa-wechat"></i></a></li>
+                            <li><a href="https://www.reddit.com/r/pirl/" title="Reddit"><i class="fa fa-reddit"></i></a></li>
+                            <li><a href="https://github.com/pirl/" title="Github"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://bitcointalk.org/index.php?topic=2120193" title="BitcoinTalk"><i class="fa fa-commenting"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row iq-mt-40">
+                    <div class="col-sm-12 text-center">
+
+                        <div class="footer-copyright iq-ptb-20">Copyright @<span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="http://www.pirl.io" class="text-green">Pirl.</a> All Rights Reserved </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-<!--======= Blog =======-->
+        <!-- Footer Info END -->
 
-<section id="blog" class="iq-page-blog overview-block-ptb">
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-12">
-              <div class="iq-blog-box">
-                  <div class="iq-blog-image clearfix">
-                    <img class="img-responsive center-block" src="https://storage.waw1.cloud.ovh.net/v1/AUTH_33a0c4ac73cf4d88a243480c275be8ac/swift-pirl/static/images/community/pirl-masternode.jpg" alt="#">
-                  </div>
-                  <div class="iq-blog-detail">
-                      <div class="blog-title"> <h5 class="iq-tw-7 iq-mb-10">Pirl One-click Masternode Setup Tutorial</h5> </a> </div>
-                      
-                      
-                      <ul class="iq-tags list-inline iq-mtb-50">
-                      
-                      <li><a href="/blog/tag/pirl/">pirl</a></li>
-                      
-                      <li><a href="/blog/tag/setup/">setup</a></li>
-                      
-                      <li><a href="/blog/tag/masternode/">masternode</a></li>
-                      
-                      <li><a href="/blog/tag/beta/">beta</a></li>
-                      
-                    </ul>
-                      </p>
-                      
-                      <div class="blog-content">
-                        
-                        <p><u><span style="font-size:14px"><strong>Overview</strong></span></u></p>
-
-<p>This guide uses the one-click-masternode setup feature.  This is an optional feature for those that wish to have a more hand-off experience with masternode mining.
-    This Poseidon feature automatically configure your CentOS linux server to be a Pirl Masternode Miner. Updates will be applied automatically.  All you have to do is monitor your server to 
-    ensure it stays operational. Before using this guide, please refer to the official <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/' target='_child'>Pirl Masternode Setup Tutorial</a> to complete the pre-requisites.</p>
-<br />
-<br />
-<p><u><span style="font-size:14px"><strong>Prerequisites</strong></span></u></p>
-<p><span style="font-size:14px">We assume you have completed the following tasks, based on the offical <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/' target='_child'>Pirl Masternode Setup Tutorial</a>.</span></p>
-
-<ul>
-    <li><strong>a.</strong> Downloaded and installed the latest Pirl Nautilus Wallet and created a wallet account/address (see tutorial).</li>
-	<li><strong>b.</strong> Created a Poseidon account (see tutorial).</li>
-	<li><strong>c.</strong> Sent 20001 Pirl to the Pirl Nautilus wallet address (see tutorial).</li>
-	<li><strong>d.</strong> Sent a small amount of Pirl (0.5) from your Nautilus wallet address to your Poseidon wallet address and recorded the transaction hash (see tutorial).</li>
-	<li><strong>e.</strong> Configured your Nautilus wallet account to 'watch' the Pirl Masternode contract and deposit 20000 Pirl into the contract address (see tutorial).</li>
-	<li><strong>f.</strong> Added the Masternode entry in Poseidon (see tutorial)</li>
-</ul>
-
-<br />
-<br />
-<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 1 -- Verify Masternode Entry<br />
-    Verify your Poseidon Masternode record has been created properly</strong></span></span></p>
-    
-    <strong>1/.</strong> Login to Poseidon, and on the left hand menu, choose <strong><em>Masternodes -&gt; My Masternodes</em></strong>. 
-    
-    <br />
-    <strong>2/.</strong> The "MN Token" should look something like: a1234567-90a1-2b34-56e7-1234f5dfe6cb.  If you do not see a valid 'Masternode Token' value, wait a few hours.  
-    If the problem continues, obtain assistance via Pirl's Discord channel <br />
-    
-    <strong>3/.</strong> If all pre-requisites have been completed successfully, you should see the following screen shot : <br />
-    <br />
-    <img alt="" src="./images/poseidon_mn.png" style="width:800px;" />
-    <br />
-    
-    
-    &nbsp;</p>
-    
-    <p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 2 --<br />
-        Create/Launch CentOS linux server</strong></span></span></p>
-        
-        <p>
-            <strong>1/.</strong> Verify that the server meets the appropriate specifications as noted in the <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/'>Pirl Masternode Setup Tutorial</a>.<br />
-            <strong>2/.</strong> The server MUST use the CentOS version of linux.<br />
-            <strong>3/.</strong> Record of the static/public IP address of the server as well as the root password.  We do recommend logging into that server 1x to ensure the 'root' credentials work.  
-            It is not necessary to take any other actions in the server.  It's preferred if you don't make any other adjustments, whatsoever.<br />
-        </p>
-        
-        
-<br />
-<br />
-        
-<p style="text-align:center"><span style="color:#2980b9"><span style="font-size:16px"><strong>-- STEP 3 -- <br />
-    Configure One-Click MN Setup</strong></span></span></p>
-    
-    <p><em>Ensure you have the public/static IP address and 'root' credentials before proceeding with this step</em><br />
-    <strong>1/.</strong> Login to Poseidon, and on the left hand menu, choose <strong><em>Masternodes -&gt; My Masternodes</em></strong>. You should see the following: <br />
-    <br />
-    <img alt="" src="./images/poseidon_one_click.png" style="height:468px; width:800px" />
-    <br />
-    <strong>2/.</strong> Click the 'One-Click MN Setup' button and complete all fields.<br />
-    <br />
-    <img alt="" src="./images/poseidon_one_click_config.png" style="height:468px; width:800px" /><br />
-    <br />
-    <strong>3/.</strong> After returning to the 'My Masternodes' screen, you should see that your masternode entry is 'Managed by Poseidon'.<br />
-    <br />
-    <img alt="" src="./images/poseidon_one_click_status.png" style="width:800px" /><br />
-    <br />
-    <strong>4/.</strong> Please allow 30 minutes for the configuration to finish.  You can click the 'details' button to monitor the status.<br />
-    <br />
-    <strong>5/.</strong> While we don&#39;t necessarily encourage active access on the server, if you wish to check the status, log into your server and issue the following command:<br />
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # journalctl -f
-    <br />
-    <br />
-    You should see status messages.  Click CTRL+C to exit the journal/log screen.
-    <br />
-    <br />
-    <strong>6/.</strong> Monitor the status of your Masternode miner by checking the Poseidon Masternode details page.  A functioning miner should appear as follows (however, the version may be different than is shown in the screen shot below):<br />
-    <br />
-    <img alt="" src="./images/poseidon_mn_details.png" style="width:800px" /><br />
-
-    &nbsp;</p>
-
-<p style="text-align:center"><span style="font-size:16px"><span style="color:#c0392b"><strong>--Troubleshooting / FAQ--</strong></span></span></p>
-
-<p><em><strong>I waited 30 minutes for the 'one-click MN setup' to complete, but the Masternode Details page is still blank</strong></em></p>
-
-<ul>
-	<li>Contact the Pirl development team in the Discord channel</li>
-</ul>
-
-<p><br />
-<em><strong>Should I be concerned that I gave away root level credentials?</strong><em> </em></em></p>
-
-<ul>
-	<li><em><em>This should not be a concern if the only purpose for the linux server is to act as a Pirl Masternode.  If you are using the same server for other purposes, we don&#39;t recommend you use this feature.</em></em></li>
-	<li><em><em>It shouldn&#39;t be necessary for you to actively manage this server.  For that reason, use a very-difficult &#39;root&#39; level password.  Do not user a password that you use on other systems.</em></em></li>
-</ul>
-
-<p><br />
-<br />
-<em><em><em><strong>Do I have to perform any updates?</strong><em> </em></em></em></em></p>
-
-<ul>
-	<li><em><em><em><em>No.  Poseidon will take care of this for you.  All you have to do is monitor your servers uptime and ensure the Masternode details page is showing current transactions.</em></em></em></em></li>
-	<br />
-	&nbsp;</li>
-</ul>
+    </footer>
 
 
 
-                        
-                      </div>
-                      <div class="iq-blog-meta">
-                          <ul class="list-inline">
-                              <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> ryanw</a></li>
-                              <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 8 Apr, 2018</a></li>
-                          </ul>
-                      </div>
-                      
+    <!-- back-to-top -->
 
-                  </div>
-                  
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
+    <div id="back-to-top">
+        <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>
+    </div>
 
-<!--======= End Blog =======--> 
+    <!-- back-to-top End -->    
 
-
-</div>
- 
-
-<!-- Footer -->
-
-<footer>
-    <!-- Footer Info -->
-
-    <section class="footer-info iq-pt-20">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="info-share text-center">
-                        <li><a href="https://twitter.com/PirlOfficial" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://discord.gg/z4faFxD" title="Discord"><i class="fa fa-wechat"></i></a></li>
-                        <li><a href="https://www.reddit.com/r/pirl/" title="Reddit"><i class="fa fa-reddit"></i></a></li>
-                        <li><a href="https://github.com/pirl/" title="Github"><i class="fa fa-github"></i></a></li>
-                        <li><a href="https://bitcointalk.org/index.php?topic=2120193" title="BitcoinTalk"><i class="fa fa-commenting"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row iq-mt-40">
-                <div class="col-sm-12 text-center">
-
-                    <div class="footer-copyright iq-ptb-20">Copyright @<span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="http://www.pirl.io" class="text-green">Pirl.</a> All Rights Reserved </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Info END -->
-
-</footer>
-
-
-
-<!-- back-to-top -->
-
-<div id="back-to-top">
-    <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>
-</div>
-
-<!-- back-to-top End -->    
-
-</div>
+    </div>
   
 <div id="fixed-nav">
     <div class="row">
