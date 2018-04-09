@@ -137,9 +137,10 @@
                                         </p>
                                         
                                         <p>
-                                            This guide uses the one-click-masternode setup feature.  This is an optional feature for those that wish to have a more hand-off experience with masternode mining.
-                                            This Poseidon feature automatically configure your CentOS linux server to be a Pirl Masternode Miner. Updates will be applied automatically.  All you have to do is monitor your server to 
-                                            ensure it stays operational. Before using this guide, please refer to the official <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/' target='_child'>Pirl Masternode Setup Tutorial</a> to complete the pre-requisites.
+                                            This guide uses the one-click-masternode setup feature.  This is an <strong>optional</strong> feature for those that wish to have a more hands-off experience with masternode mining.
+                                            This Poseidon feature automatically configures your CentOS linux server to be a Pirl Masternode Miner. Updates will be applied automatically.  All you have to do is monitor your server to 
+                                            ensure it stays operational.  This is as simple as rebooting the server, should it come offline.  Before using this guide, please refer to 
+                                            the official <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/' target='_child'>Pirl Masternode Setup Tutorial</a> to complete the pre-requisites.
                                         </p>
                                         
                                         <br />
@@ -159,10 +160,11 @@
                                         <ul>
                                             <li><strong>a.</strong> Downloaded and installed the latest Pirl Nautilus Wallet and created a wallet account/address (see tutorial).</li>
                                             <li><strong>b.</strong> Created a Poseidon account (see tutorial).</li>
-                                            <li><strong>c.</strong> Sent 20001 Pirl to the Pirl Nautilus wallet address (see tutorial).</li>
+                                            <li><strong>c.</strong> Sent 20001 Pirl to the Pirl Nautilus wallet address in step (a.) (see tutorial).</li>
                                             <li><strong>d.</strong> Sent a small amount of Pirl (0.5) from your Nautilus wallet address to your Poseidon wallet address and recorded the transaction hash (see tutorial).</li>
                                             <li><strong>e.</strong> Configured your Nautilus wallet account to 'watch' the Pirl Masternode contract and deposit 20000 Pirl into the contract address (see tutorial).</li>
                                             <li><strong>f.</strong> Added the Masternode entry in Poseidon (see tutorial)</li>
+                                            <li><strong>g.</strong> Waited until the Masternode is issued a valid MN token (which will occur automatically. This may take a couple of hours to complete.)</li>
                                         </ul>
 
                                         <br />
@@ -182,8 +184,6 @@
                                             <img alt="" src="./images/poseidon_mn.png" style="width:800px;" />
                                             <br />
                                             
-                                            
-                                            
                                         </p>
                     
                                         <p style="text-align:center">
@@ -195,10 +195,13 @@
                                         </p>
                                             
                                         <p>
-                                            <strong>1/.</strong> Verify that the server meets the appropriate specifications as noted in the <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/'>Pirl Masternode Setup Tutorial</a>.<br />
-                                            <strong>2/.</strong> The server MUST use the CentOS version of linux.<br />
+                                            <strong>1/.</strong> Verify that the server meets the appropriate specifications as noted in the <a href='https://pirl.io/blog/1-pirl-masternode-setup-tutorial/'>Pirl Masternode Setup Tutorial</a>.
+                                            <br />
+                                            <strong>2/.</strong> The server MUST use the CentOS version of linux.
+                                            <br />
                                             <strong>3/.</strong> Record of the static/public IP address of the server as well as the root password.  We do recommend logging into that server 1x to ensure the 'root' credentials work.  
-                                            It is not necessary to take any other actions in the server.  It's preferred if you don't make any other adjustments, whatsoever.<br />
+                                            It is not necessary to take any other actions in the server.  In fact, it's preferred that you don't make any other adjustments, whatsoever.
+                                            <br />
                                         </p>
                                         
                                                 
@@ -227,7 +230,7 @@
                                             <img alt="" src="./images/poseidon_one_click_config.png" style="height:468px; width:800px" />
                                             <br />
                                             <br />
-                                            <strong>3/.</strong> After returning to the 'My Masternodes' screen, you should see that your masternode entry is 'Managed by Poseidon'.
+                                            <strong>3/.</strong> After returning to the 'My Masternodes' screen, you should see that your masternode entry for 'Managed by Poseidon' is set to 'True'.
                                             <br />
                                             <br />
                                             <img alt="" src="./images/poseidon_one_click_status.png" style="width:800px" />
